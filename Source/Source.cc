@@ -1,8 +1,8 @@
 //Include GLEW  
-#include <GL/glew.h>  
+#include "glew.h"
 
 //Include GLFW  
-#include <GL/glew.h>  
+#include "glfw3.h"
 
 //Include the standard C++ headers  
 #include <stdio.h>  
