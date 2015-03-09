@@ -43,7 +43,7 @@ int main(void)
 	GLFWwindow* window;
 
 	//Create a window and create its OpenGL context  
-	window = glfwCreateWindow(640, 480, "Test Window", NULL, NULL);
+	window = glfwCreateWindow(1920, 1080, "Test Window", NULL, NULL);
 
 	//TEST CODE!
 	int windowHeight = 640;
