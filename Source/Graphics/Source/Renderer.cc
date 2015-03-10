@@ -19,6 +19,11 @@ namespace Adon
 			driver = &d;
 		}
 
+		void Renderer::setViewportSize(int width, int height)
+		{
+			driver->setViewportSize(width, height);
+		}
+
 		void Renderer::prepare()
 		{
 			driver->prepare();

@@ -1,5 +1,5 @@
 //Include GLEW  
-#include "glew.h"
+//#include "glew.h"
 
 //Include GLFW  
 #include "glfw3.h"
@@ -10,6 +10,7 @@
 #include <math.h>
 #include "Adon.h"
 #include "TestRendererDriver.h"
+#include "OpenGL11RendererDriver.h"
 
 using namespace Adon;
 using namespace Adon::Graphics;
@@ -39,10 +40,10 @@ int main(void)
 	}
 
 	//Set the GLFW window creation hints - these are optional  
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); //Request a specific OpenGL version  
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); //Request a specific OpenGL version  
-	glfwWindowHint(GLFW_SAMPLES, 4); //Request 4x antialiasing  
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 1); //Request a specific OpenGL version  
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1); //Request a specific OpenGL version  
+	//glfwWindowHint(GLFW_SAMPLES, 4); //Request 4x antialiasing  
+	//glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	//Declare a window object  
 	GLFWwindow* window;
@@ -69,20 +70,21 @@ int main(void)
 	glfwSetKeyCallback(window, key_callback);
 
 	//Initialize GLEW  
-	GLenum err = glewInit();
+	/*GLenum err = glewInit();
 
 	//If GLEW hasn't initialized  
 	if (err != GLEW_OK)
 	{
 		fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
 		return -1;
-	}
+	}*/
 
 	Renderer& renderer = Renderer::getInstance();
-	renderer.setDriver(TestRendererDriver::getInstance());
+	renderer.setDriver(OpenGL11RendererDriver::getInstance());
+	renderer.setViewportSize(640, 480);
 
 	//Set a background color  
-	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	glClearColor(0.0f, 0.3f, 0.8f, 1.0f);
 
 	//Main Loop  
 	do
@@ -97,10 +99,10 @@ int main(void)
 		renderer.addSprite(sprite);
 
 		//Clear color buffer  
-		glClear(GL_COLOR_BUFFER_BIT);
-		const GLfloat clearbuffervar[] = { 0.1f, 1.0f, 1.0f, 1.0f };
+		//glClear(GL_COLOR_BUFFER_BIT);
+		//const GLfloat clearbuffervar[] = { 0.1f, 1.0f, 1.0f, 1.0f };
 		//RENDER//
-		glClearBufferfv(GL_COLOR, 0, clearbuffervar);
+		//glClearBufferfv(GL_COLOR, 0, clearbuffervar);
 		renderer.render();
 		//Swap buffers  
 		glfwSwapBuffers(window);

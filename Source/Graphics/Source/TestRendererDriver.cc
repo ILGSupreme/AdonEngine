@@ -4,6 +4,11 @@
 using namespace Adon;
 using namespace Adon::Graphics;
 
+void Adon::Graphics::TestRendererDriver::setViewportSize(int width, int height)
+{
+	std::cout << "hej jag settar vyport stuff >D";
+}
+
 void Adon::Graphics::TestRendererDriver::prepare()
 {
 	std::cout << "hej jag preparerar >D";

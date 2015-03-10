@@ -10,6 +10,7 @@ namespace Adon
 		class RendererDriver
 		{
 		public:
+			virtual void setViewportSize(int width, int height) = 0;
 			virtual void prepare() = 0;
 			virtual void addSprite(SpriteDescriptor& s) = 0;
 			virtual void render() = 0;

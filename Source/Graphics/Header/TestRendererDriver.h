@@ -10,6 +10,7 @@ namespace Adon
 		class TestRendererDriver : public RendererDriver
 		{
 		public:
+			void setViewportSize(int width, int height);
 			void prepare();
 			void addSprite(SpriteDescriptor& s);
 			void render();
