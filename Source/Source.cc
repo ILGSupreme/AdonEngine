@@ -8,6 +8,11 @@
 #include <stdio.h>  
 #include <stdlib.h>	
 #include <math.h>
+#include "Adon.h"
+#include "TestRendererDriver.h"
+
+using namespace Adon;
+using namespace Adon::Graphics;
 
 static void error_callback(int error, const char* description)
 {
@@ -73,18 +78,25 @@ int main(void)
 		return -1;
 	}
 
+	Renderer& renderer = Renderer::getInstance();
+
+	TestRendererDriver driver;
+
+	renderer.setDriver(driver);
 	//Set a background color  
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 	//Main Loop  
 	do
 	{
+		renderer.prepare();
+		renderer.addSprite();
 		//Clear color buffer  
 		glClear(GL_COLOR_BUFFER_BIT);
 		const GLfloat clearbuffervar[] = { 0.1f, 1.0f, 1.0f, 1.0f };
 		//RENDER//
 		glClearBufferfv(GL_COLOR, 0, clearbuffervar);
-
+		renderer.render();
 		//Swap buffers  
 		glfwSwapBuffers(window);
 

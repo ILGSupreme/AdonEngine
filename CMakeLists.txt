@@ -6,7 +6,7 @@ SET(PROJ_OUT_PATH ${CMAKE_BINARY_DIR})
 SET(PROJ_SOURCE ${PROJ_PATH}/Source)
 SET(PROJ_GRAPHICS ${PROJ_PATH}/Source/Graphics)
 SET(PROJ_LIBRARIES ${PROJ_PATH}/libs/GLEW/glew32.lib ${PROJ_PATH}/libs/GLFW/glfw3.lib)
-SET(PROJ_INCLUDES "libs/GLEW" "libs/GLFW")
+SET(PROJ_INCLUDES "libs/GLEW" "libs/GLFW" "Source/Graphics/Header" "Source/Graphics")
 
 FIND_PACKAGE(OpenGL)
 
