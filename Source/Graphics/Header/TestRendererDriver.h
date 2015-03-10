@@ -10,11 +10,12 @@ namespace Adon
 		{
 		public:
 			void prepare();
-
 			void addSprite();
-
 			void render();
-
+			static TestRendererDriver& getInstance();
+		private:
+			TestRendererDriver();
+			static TestRendererDriver instance;
 		};
 	}
 }
