@@ -1,5 +1,6 @@
 #ifndef __TEST__RENDERER__DRIVER__H__
 #define __TEST__RENDERER__DRIVER__H__
+
 #include "RendererDriver.h"
 
 namespace Adon
@@ -10,7 +11,7 @@ namespace Adon
 		{
 		public:
 			void prepare();
-			void addSprite();
+			void addSprite(SpriteDescriptor& s);
 			void render();
 			static TestRendererDriver& getInstance();
 		private:

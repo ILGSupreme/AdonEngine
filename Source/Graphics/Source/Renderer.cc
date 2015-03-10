@@ -1,4 +1,5 @@
 #include "Renderer.h"
+
 namespace Adon
 {
 	namespace Graphics
@@ -12,9 +13,10 @@ namespace Adon
 		{
 
 		}
-		void Renderer::setDriver(RendererDriver& driver)
+
+		void Renderer::setDriver(RendererDriver& d)
 		{
-			this->driver = &driver;
+			driver = &d;
 		}
 
 		void Renderer::prepare()
@@ -22,9 +24,9 @@ namespace Adon
 			driver->prepare();
 		}
 
-		void Renderer::addSprite()
+		void Renderer::addSprite(SpriteDescriptor& s)
 		{
-			driver->addSprite();
+			driver->addSprite(s);
 		}
 
 		void Renderer::render()

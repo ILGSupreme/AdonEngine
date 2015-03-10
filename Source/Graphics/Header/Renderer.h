@@ -2,6 +2,7 @@
 #define __RENDERER__H__
 
 #include "RendererDriver.h"
+#include "SpriteDescriptor.h"
 
 namespace Adon
 {
@@ -10,9 +11,9 @@ namespace Adon
 		class Renderer
 		{
 		public:
-			void setDriver(RendererDriver& driver);
+			void setDriver(RendererDriver& d);
 			void prepare();
-			void addSprite();
+			void addSprite(SpriteDescriptor& s);
 			void render();
 			static Renderer& getInstance();
 		private:

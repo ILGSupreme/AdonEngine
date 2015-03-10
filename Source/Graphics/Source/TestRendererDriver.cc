@@ -9,7 +9,7 @@ void Adon::Graphics::TestRendererDriver::prepare()
 	std::cout << "hej jag preparerar >D";
 }
 
-void Adon::Graphics::TestRendererDriver::addSprite()
+void Adon::Graphics::TestRendererDriver::addSprite(SpriteDescriptor& s)
 {
 	std::cout << "hej jag addar sprit! >D";
 }

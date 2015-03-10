@@ -48,7 +48,7 @@ int main(void)
 	GLFWwindow* window;
 
 	//Create a window and create its OpenGL context  
-	window = glfwCreateWindow(1920, 1080, "Test Window", NULL, NULL);
+	window = glfwCreateWindow(640, 480, "Test Window", NULL, NULL);
 
 	//TEST CODE!
 	int windowHeight = 640;
@@ -88,7 +88,14 @@ int main(void)
 	do
 	{
 		renderer.prepare();
-		renderer.addSprite();
+
+		SpriteDescriptor sprite;
+		sprite.x = 32;
+		sprite.y = 32;
+		sprite.width = 64;
+		sprite.height = 64;
+		renderer.addSprite(sprite);
+
 		//Clear color buffer  
 		glClear(GL_COLOR_BUFFER_BIT);
 		const GLfloat clearbuffervar[] = { 0.1f, 1.0f, 1.0f, 1.0f };
