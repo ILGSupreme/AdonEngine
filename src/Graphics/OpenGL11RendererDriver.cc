@@ -21,16 +21,16 @@ void Adon::Graphics::OpenGL11RendererDriver::render(SpriteDescriptor* sprites, i
 	glOrtho(0, viewportWidth, viewportHeight, 0, 0, 100);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glClearColor(0, 0, 0, 1);
+	glClearColor(1, 1, 1, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	for (int i = 0; i < spriteCount; i++) {
 		auto& s = sprites[i];
-		float l = s.position.x;
-		float r = l + s.size.x;
-		float t = s.position.y;
-		float b = t + s.size.y;
-		glColor4f(s.color.r, s.color.g, s.color.b, s.color.a);
+		float l = sprites[i].position.x;
+		float r = l + sprites[i].size.x;
+		float t = sprites[i].position.y;
+		float b = t + sprites[i].size.y;
+		glColor4f(sprites[i].color.r, sprites[i].color.g, sprites[i].color.b, sprites[i].color.a);
 		glBegin(GL_QUADS);
 		glVertex2f(l, t);
 		glVertex2f(l, b);

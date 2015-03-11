@@ -84,20 +84,23 @@ int main(void)
 		sprites[0].color.r = 1;
 		sprites[0].color.g = 0;
 		sprites[0].color.b = 0;
-		sprites[1].position.x = 80;
-		sprites[1].position.y = 80;
-		sprites[1].size.x = 128;
+		sprites[0].color.a = 1;
+		sprites[1].position.x = 10;
+		sprites[1].position.y = 10;
+		sprites[1].size.x = 64;
 		sprites[1].size.y = 32;
 		sprites[1].color.r = 1;
-		sprites[1].color.g = 0;
-		sprites[1].color.b = 1;
+		sprites[1].color.g = 1;
+		sprites[1].color.b = 0;
+		sprites[0].color.a = 1;
 
+		unsigned int test = sizeof(sprites) / sizeof(SpriteDescriptor);
 		//Clear color buffer  
 		//glClear(GL_COLOR_BUFFER_BIT);
 		//const GLfloat clearbuffervar[] = { 0.1f, 1.0f, 1.0f, 1.0f };
 		//RENDER//
 		//glClearBufferfv(GL_COLOR, 0, clearbuffervar);
-		renderer.render(sprites, sizeof(sprites) / sizeof(SpriteDescriptor));
+		renderer.render(sprites,sizeof(sprites) / sizeof(SpriteDescriptor));
 		//Swap buffers  
 		glfwSwapBuffers(window);
 
