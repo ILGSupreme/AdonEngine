@@ -19,7 +19,7 @@ void Adon::Graphics::OpenGL11RendererDriver::render(SpriteDescriptor* sprites, i
 	glOrtho(0, viewportWidth, viewportHeight, 0, 0, 100);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glClearColor(0.0f, 0.3f, 0.8f, 1.0f);
+	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	for (int i = 0; i < spriteCount; i++) {
