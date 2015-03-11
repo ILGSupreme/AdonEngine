@@ -13,9 +13,7 @@ namespace Adon
 		public:
 			void setDriver(RendererDriver& d);
 			void setViewportSize(int width, int height);
-			void prepare();
-			void addSprite(SpriteDescriptor& s);
-			void render();
+			void render(SpriteDescriptor* sprites, int spriteCount);
 			static Renderer& getInstance();
 		private:
 			Renderer();

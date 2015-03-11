@@ -9,17 +9,7 @@ void Adon::Graphics::TestRendererDriver::setViewportSize(int width, int height)
 	std::cout << "hej jag settar vyport stuff >D";
 }
 
-void Adon::Graphics::TestRendererDriver::prepare()
-{
-	std::cout << "hej jag preparerar >D";
-}
-
-void Adon::Graphics::TestRendererDriver::addSprite(SpriteDescriptor& s)
-{
-	std::cout << "hej jag addar sprit! >D";
-}
-
-void Adon::Graphics::TestRendererDriver::render()
+void Adon::Graphics::TestRendererDriver::render(SpriteDescriptor* sprites, int spriteCount)
 {
 	std::cout << "hej jag renderar!! >D";
 }

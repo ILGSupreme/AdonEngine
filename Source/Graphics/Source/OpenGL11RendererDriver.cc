@@ -11,17 +11,7 @@ void Adon::Graphics::OpenGL11RendererDriver::setViewportSize(int width, int heig
 	viewportHeight = height;
 }
 
-void Adon::Graphics::OpenGL11RendererDriver::prepare()
-{
-	sprites.clear();
-}
-
-void Adon::Graphics::OpenGL11RendererDriver::addSprite(SpriteDescriptor& s)
-{
-	sprites.push_back(s);
-}
-
-void Adon::Graphics::OpenGL11RendererDriver::render()
+void Adon::Graphics::OpenGL11RendererDriver::render(SpriteDescriptor* sprites, int spriteCount)
 {
 	glViewport(0, 0, viewportWidth, viewportHeight);
 	glMatrixMode(GL_PROJECTION);
@@ -29,9 +19,11 @@ void Adon::Graphics::OpenGL11RendererDriver::render()
 	glOrtho(0, viewportWidth, viewportHeight, 0, 0, 100);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+	glClearColor(0.0f, 0.3f, 0.8f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	for (auto& s : sprites) {
+	for (int i = 0; i < spriteCount; i++) {
+		auto& s = sprites[i];
 		float l = s.position.x;
 		float r = l + s.size.x;
 		float t = s.position.y;

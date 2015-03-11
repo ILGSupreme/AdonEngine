@@ -24,19 +24,9 @@ namespace Adon
 			driver->setViewportSize(width, height);
 		}
 
-		void Renderer::prepare()
+		void Renderer::render(SpriteDescriptor* sprites, int spriteCount)
 		{
-			driver->prepare();
-		}
-
-		void Renderer::addSprite(SpriteDescriptor& s)
-		{
-			driver->addSprite(s);
-		}
-
-		void Renderer::render()
-		{
-			driver->render();
+			driver->render(sprites, spriteCount);
 		}
 
 		Renderer Renderer::instance;
