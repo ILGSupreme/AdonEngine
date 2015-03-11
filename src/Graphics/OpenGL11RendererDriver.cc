@@ -13,6 +13,8 @@ void Adon::Graphics::OpenGL11RendererDriver::setViewportSize(int width, int heig
 
 void Adon::Graphics::OpenGL11RendererDriver::render(SpriteDescriptor* sprites, int spriteCount)
 {
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glViewport(0, 0, viewportWidth, viewportHeight);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
@@ -28,7 +30,7 @@ void Adon::Graphics::OpenGL11RendererDriver::render(SpriteDescriptor* sprites, i
 		float r = l + s.size.x;
 		float t = s.position.y;
 		float b = t + s.size.y;
-		glColor3f(s.color.r, s.color.g, s.color.b);
+		glColor4f(s.color.r, s.color.g, s.color.b, s.color.a);
 		glBegin(GL_QUADS);
 		glVertex2f(l, t);
 		glVertex2f(l, b);

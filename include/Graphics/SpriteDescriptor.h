@@ -5,7 +5,7 @@ struct SpriteDescriptor
 {
 	struct { float x, y; } position;
 	struct { float x, y; } size;
-	struct { float r, g, b; } color;
+	struct { float r, g, b, a; } color;
 };
 
 #endif //__SPRITE__DESCRIPTOR__H__
