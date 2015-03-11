@@ -1,4 +1,9 @@
 # AdonEngine
+
+#LATEST VERSION:
+There is a bug where the compiler will complain if you build the engine in debug mode, build it in release mode for both project!
+
+
 Adon engine is a small engine, made for educational and fun factors . We will be constantly be making progress and updates.
 
 Installation of solution files:
