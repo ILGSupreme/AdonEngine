@@ -32,11 +32,11 @@ void Adon::Graphics::OpenGL11RendererDriver::render()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	for (auto& s : sprites) {
-		float l = s.x;
-		float r = l + s.width;
-		float t = s.y;
-		float b = t + s.height;
-		glColor3f(1, 1, 1);
+		float l = s.position.x;
+		float r = l + s.size.x;
+		float t = s.position.y;
+		float b = t + s.size.y;
+		glColor3f(s.color.r, s.color.g, s.color.b);
 		glBegin(GL_QUADS);
 		glVertex2f(l, t);
 		glVertex2f(l, b);

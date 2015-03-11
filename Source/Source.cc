@@ -92,10 +92,13 @@ int main(void)
 		renderer.prepare();
 
 		SpriteDescriptor sprite;
-		sprite.x = 32;
-		sprite.y = 32;
-		sprite.width = 64;
-		sprite.height = 64;
+		sprite.position.x = 32;
+		sprite.position.y = 32;
+		sprite.size.x = 64;
+		sprite.size.y = 64;
+		sprite.color.r = 1;
+		sprite.color.g = 0;
+		sprite.color.b = 0;
 		renderer.addSprite(sprite);
 
 		//Clear color buffer  

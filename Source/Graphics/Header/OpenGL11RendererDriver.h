@@ -18,8 +18,8 @@ namespace Adon
 			static OpenGL11RendererDriver& getInstance();
 		private:
 			OpenGL11RendererDriver();
-			float viewportWidth;
-			float viewportHeight;
+			int viewportWidth;
+			int viewportHeight;
 			std::vector<SpriteDescriptor> sprites;
 			static OpenGL11RendererDriver instance;
 		};
