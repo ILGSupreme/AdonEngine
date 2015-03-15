@@ -1,7 +1,7 @@
 # AdonEngine
 
 #LATEST VERSION:
-#importan info
+#important info
 The bug is somewhat fixed but there is still some issues.
 When building the engine , do it with install project, it is included when you build the solution files and projects with CMake,
 remember that the configuration build/debug output must be the same for both projects! And BTWremember to add glfw3.lib ,glew32s.lib in the add dependencies of AdonEngine Project!
