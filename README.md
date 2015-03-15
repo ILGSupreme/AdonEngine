@@ -1,7 +1,13 @@
 # AdonEngine
 
 #LATEST VERSION:
-There is a bug where the compiler will complain if you build the engine in debug mode, build it in release mode for both project!
+#importan info
+The bug is somewhat fixed but there is still some issues.
+When building the engine , do it with install project, it is included when you build the solution files and projects with CMake,
+remember that the configuration build/debug output must be the same for both projects.
+
+old info --> ###..
+###..There is a bug where the compiler will complain if you build the engine in debug mode, build it in release mode for both project!#
 
 
 Adon engine is a small engine, made for educational and fun factors . We will be constantly be making progress and updates.
