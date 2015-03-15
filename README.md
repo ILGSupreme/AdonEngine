@@ -9,6 +9,7 @@ remember that the configuration build/debug output must be the same for both pro
 old info -->
 There is a bug where the compiler will complain if you build the engine in debug mode, build it in release mode for both project!#
 
+#ABOUT
 
 Adon engine is a small engine, made for educational and fun factors . We will be constantly be making progress and updates.
 
