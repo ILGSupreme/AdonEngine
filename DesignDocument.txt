@@ -1,0 +1,37 @@
+--- Adon Engine ---
+
+  --- Entity Component System
+
+	System -- Abstract Interface
+		
+		---OnMessage()
+	
+	System Manager --- Singleton : Message Reciever
+		
+		---RegisterSystem()
+
+	Entity Manager --- Singleton
+
+		--- CreateEntity()
+		--- DestroyEntity()
+		--- GetEntities()
+	
+
+	Component Manager --- Singleton
+		
+		--- RegisterComponent()
+
+   --- Messaging
+	
+	Message Receiver --- Abstract Interface
+
+		--- OnMessage()
+
+		
+	Message Dispatcher --- Singleton
+		
+		--- RegisterReceiver()
+
+		--- SendMessage()
+		
+		--- SendDelayedMessage()
