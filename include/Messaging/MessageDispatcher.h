@@ -15,7 +15,11 @@ namespace Adon
 		static MessageDispatcher& GetInstance();
 	private:
 		std::vector<MessageReceiver*> messagereceivers;
-		static MessageDispatcher* instance;
+
+		// To avoid accidental instantiation of singleton
+		MessageDispatcher() {};
+		MessageDispatcher(MessageDispatcher const&) = delete;
+		void operator=(MessageDispatcher const&) = delete;
 	};
 }
 

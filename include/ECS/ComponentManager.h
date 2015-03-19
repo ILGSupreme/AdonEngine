@@ -9,7 +9,10 @@ namespace Adon
 		void RegisterComponent();
 		static ComponentManager& GetInstance();
 	private:
-		static ComponentManager* instance;
+		// To avoid accidental instantiation of singleton
+		ComponentManager() {};
+		ComponentManager(ComponentManager const&) = delete;
+		void operator=(ComponentManager const&) = delete;
 	};
 }
 

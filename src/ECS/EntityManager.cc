@@ -1,7 +1,4 @@
-
 #include "EntityManager.h"
-
-Adon::EntityManager* Adon::EntityManager::instance = nullptr;
 
 void Adon::EntityManager::CreateEntity()
 {
@@ -20,9 +17,6 @@ std::vector<int>& Adon::EntityManager::GetEntities()
 
 Adon::EntityManager& Adon::EntityManager::GetInstance()
 {
-	if (!instance)
-	{
-		instance = new Adon::EntityManager();
-	}
-	return *instance;
+	static EntityManager instance;
+	return instance;
 }

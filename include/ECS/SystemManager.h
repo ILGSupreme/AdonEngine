@@ -15,7 +15,11 @@ namespace Adon
 		static SystemManager& GetInstance();
 	private:
 		std::vector<System*> systems;
-		static SystemManager* instance;
+
+		// To avoid accidental instantiation of singleton
+		SystemManager() {};
+		SystemManager(SystemManager const&) = delete;
+		void operator=(SystemManager const&) = delete;
 	};
 }
 

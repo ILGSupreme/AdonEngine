@@ -15,7 +15,11 @@ namespace Adon
 
 	private:
 		std::vector<int> entities;
-		static EntityManager* instance;
+
+		// To avoid accidental instantiation of singleton
+		EntityManager() {};
+		EntityManager(EntityManager const&) = delete;
+		void operator=(EntityManager const&) = delete;
 	};
 }
 
