@@ -1,0 +1,6 @@
+#ifndef COMPONENT_MANAGER_H_
+#define COMPONENT_MANAGER_H_
+
+
+
+#endif
