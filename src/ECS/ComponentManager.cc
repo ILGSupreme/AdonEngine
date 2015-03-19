@@ -1,6 +1,20 @@
-#ifndef COMPONENT_MANAGER_H
-#define COMPONENT_MANAGER_H
+#include "ComponentManager.h"
 
 
+Adon::ComponentManager* Adon::ComponentManager::instance = nullptr;
 
-#endif
+void Adon::ComponentManager::RegisterComponent()
+{
+
+}
+
+Adon::ComponentManager& Adon::ComponentManager::GetInstance()
+{
+	if (!instance)
+	{
+		instance = new Adon::ComponentManager();
+	}
+
+	return *instance;
+
+}
