@@ -3,9 +3,9 @@
 
 Adon::SystemManager* Adon::SystemManager::instance = nullptr;
 
-void Adon::SystemManager::RegisterSystem(System* system)
+void Adon::SystemManager::RegisterSystem(System& system)
 {
-
+	systems.push_back(&system);
 }
 
 void Adon::SystemManager::OnMessage()

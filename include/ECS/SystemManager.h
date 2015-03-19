@@ -10,7 +10,7 @@ namespace Adon
 	class SystemManager : public MessageReceiver
 	{
 	public:
-		void RegisterSystem(System* system);
+		void RegisterSystem(System& system);
 		void OnMessage() override;
 		static SystemManager& GetInstance();
 	private:
