@@ -24,7 +24,7 @@ SET(GLEW_LIB ${PROJ_PATH}/lib/glew32s.lib)
 
 FIND_PACKAGE(OpenGL)
 
-### ----- Adon Engine -----###
+#/////////////////////// Adon Engine //////////////////////////////////////////////
 
 project(${PROJ_NAME})
 
@@ -56,6 +56,8 @@ add_library(${PROJ_NAME} ${ALLSRCS})
 SET_TARGET_PROPERTIES(${PROJ_NAME} PROPERTIES LINKER_LANGUAGE C++)
 
 TARGET_LINK_LIBRARIES(${PROJ_NAME} ${PROJ_LIBRARIES} ${OPENGL_LIBRARIES})
+
+#///////////////////////////////////////////////////////////////////////////////////////////
 
 #add_custom_target(combined ALL COMMAND ${CMAKE_AR} rc ${PROJ_NAME}.lib $<TARGET_FILE:${GLEW_LIB}> $<TARGET_FILE:${GLFW_LIB}>)
 
