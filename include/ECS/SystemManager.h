@@ -11,7 +11,7 @@ namespace Adon
 	{
 	public:
 		void RegisterSystem(System& system);
-		void OnMessage() override;
+		void OnMessage(std::shared_ptr<Message> m) override;
 		static SystemManager& GetInstance();
 	private:
 		std::vector<System*> systems;
