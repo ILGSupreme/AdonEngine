@@ -2,11 +2,14 @@
 #define MESSAGE_H
 
 
-class Message
+namespace Adon
 {
-public:
-	virtual unsigned int GetTypeId() = 0;
-};
+	class Message
+	{
+	public:
+		virtual unsigned int GetTypeId() = 0;
+	};
+}
 
 
 #endif
