@@ -14,6 +14,7 @@ namespace Adon
 			{
 				float x, y;
 			};
+
 			float buffer[2];
 		};
 
