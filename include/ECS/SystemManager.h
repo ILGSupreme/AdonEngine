@@ -2,7 +2,7 @@
 #define SYSTEM_MANAGER_H_
 
 #include "System.h"
-#include "MessageReceiver.h"
+#include "Messaging/MessageReceiver.h"
 #include <vector>
 
 namespace Adon
