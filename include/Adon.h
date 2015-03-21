@@ -4,6 +4,7 @@
 #include "ECS/ComponentManager.h"
 #include "ECS/EntityManager.h"
 #include "ECS/SystemManager.h"
+#include "Math/Math.h"
 #include "Messaging/Message.h"
 #include "Messaging/MessageDispatcher.h"
 
