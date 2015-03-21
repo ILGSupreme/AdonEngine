@@ -31,7 +31,7 @@ namespace Adon
 		Point2 A = R.start;
 		Vector2 u = R.d;
 		Vector2 v = P - A;
-		float t = std::max(dot(u, v) / dot(u, u), 0.0f);
+		float t = max(dot(u, v) / dot(u, u), 0.0f);
 		return A + t * u;
 	}
 
