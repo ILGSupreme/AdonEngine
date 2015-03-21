@@ -35,3 +35,19 @@
 		--- SendMessage()
 		
 		--- SendDelayedMessage()
+
+
+
+   --- Application
+	
+	Application --- Singleton?
+		
+		--- Open()
+		--- Run()
+		--- Close()
+		--- Exit()
+
+   --- Graphics User Interface
+	
+	Window -- Abstract Interface
+		Update()
