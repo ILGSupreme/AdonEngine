@@ -20,21 +20,6 @@ namespace Adon
 			P1(P1), P2(P2)
 		{}
 	};
-
-	static inline Point2 ClosestPoint(const Point2& P, const Line2& L)
-	{
-		Point2 A = L.P1;
-		Point2 B = L.P2;
-		Vector2 u = B - A;
-		Vector2 v = P - A;
-		float t = dot(u, v) / dot(u, u);
-		return A + t * u;
-	}
-
-	static inline float ClosestDistance(const Point2& P, const Line2& L)
-	{
-		return length(P - ClosestPoint(P, L));
-	}
 }
 
 #endif

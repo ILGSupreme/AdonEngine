@@ -26,16 +26,6 @@ namespace Adon
 			C(C), r(r)
 		{}
 	};
-
-	static inline Point2 ClosestPoint(const Point2& P, const Circle& C)
-	{
-		return C.center + unit(P - C.center) * C.radius;
-	}
-
-	static inline float ClosestDistance(const Point2& P, const Circle& C)
-	{
-		return length(P - C.center) - C.radius;
-	}
 }
 
 #endif

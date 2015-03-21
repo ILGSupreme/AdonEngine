@@ -29,16 +29,6 @@ namespace Adon
 	{
 		return clamp(P, R.min, R.max);
 	}
-
-	static inline Point2 ClosestPoint(const Point2& P, const Rectangle& R)
-	{
-		return clamp(P, R);
-	}
-
-	static inline float ClosestDistance(const Point2& P, const Rectangle& R)
-	{
-		return length(P - ClosestPoint(P, R));
-	}
 }
 
 #endif
