@@ -1,6 +1,6 @@
 #ifndef SYSTEM_MANAGER_H_
 #define SYSTEM_MANAGER_H_
-
+#pragma once
 #include "System.h"
 #include "Messaging/MessageReceiver.h"
 #include <vector>
