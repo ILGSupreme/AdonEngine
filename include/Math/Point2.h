@@ -1,8 +1,8 @@
 #ifndef ADON_POINT_2_H
 #define ADON_POINT_2_H
 
+#include "Utilities.h"
 #include "Vector2.h"
-#include <algorithm>
 
 namespace Adon
 {
@@ -56,6 +56,11 @@ namespace Adon
 	static inline Point2 max(const Point2& P1, const Point2& P2)
 	{
 		return Point2(std::max(P1.x, P2.x), std::max(P1.y, P2.y));
+	}
+
+	static inline Point2 clamp(const Point2& P, const Point2& lower, const Point2& upper)
+	{
+		return Point2(clamp(P.x, lower.x, upper.x), clamp(P.y, lower.y, upper.y));
 	}
 
 	static inline Vector2 ToVector2(const Point2& P)

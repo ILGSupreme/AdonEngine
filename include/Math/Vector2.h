@@ -1,7 +1,7 @@
 #ifndef ADON_VECTOR_2_H
 #define ADON_VECTOR_2_H
 
-#include <algorithm>
+#include "Utilities.h"
 #include <cmath>
 
 namespace Adon
@@ -96,6 +96,11 @@ namespace Adon
 	static inline Vector2 max(const Vector2& v1, const Vector2& v2)
 	{
 		return Vector2(std::max(v1.x, v2.x), std::max(v1.y, v2.y));
+	}
+
+	static inline Vector2 clamp(const Vector2& v, const Vector2& lower, const Vector2& upper)
+	{
+		return Vector2(clamp(v.x, lower.x, upper.x), clamp(v.y, lower.y, upper.y));
 	}
 
 	static inline float dot(const Vector2& v1, const Vector2& v2)
