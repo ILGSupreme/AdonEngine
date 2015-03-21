@@ -27,19 +27,19 @@ namespace Adon
 		{}
 	};
 
-	static inline Point2 ClosestPoint(const Point2& P, const Segment2& s)
+	static inline Point2 ClosestPoint(const Point2& P, const Segment2& S)
 	{
-		Point2 A = s.start;
-		Point2 B = s.end;
+		Point2 A = S.start;
+		Point2 B = S.end;
 		Vector2 u = B - A;
 		Vector2 v = P - A;
 		float t = clamp(dot(u, v) / dot(u, u), 0.0f, 1.0f);
 		return A + t * u;
 	}
 
-	static inline float ClosestDistance(const Point2& P, const Segment2& s)
+	static inline float ClosestDistance(const Point2& P, const Segment2& S)
 	{
-		return length(P - ClosestPoint(P, s));
+		return length(P - ClosestPoint(P, S));
 	}
 }
 
