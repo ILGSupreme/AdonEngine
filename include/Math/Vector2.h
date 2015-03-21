@@ -90,12 +90,12 @@ namespace Adon
 
 	static inline Vector2 min(const Vector2& v1, const Vector2& v2)
 	{
-		return Vector2(std::min(v1.x, v2.x), std::min(v1.y, v2.y));
+		return Vector2(min(v1.x, v2.x), min(v1.y, v2.y));
 	}
 
 	static inline Vector2 max(const Vector2& v1, const Vector2& v2)
 	{
-		return Vector2(std::max(v1.x, v2.x), std::max(v1.y, v2.y));
+		return Vector2(max(v1.x, v2.x), max(v1.y, v2.y));
 	}
 
 	static inline Vector2 clamp(const Vector2& v, const Vector2& lower, const Vector2& upper)

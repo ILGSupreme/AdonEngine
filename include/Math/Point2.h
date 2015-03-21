@@ -50,12 +50,12 @@ namespace Adon
 
 	static inline Point2 min(const Point2& P1, const Point2& P2)
 	{
-		return Point2(std::min(P1.x, P2.x), std::min(P1.y, P2.y));
+		return Point2(min(P1.x, P2.x), min(P1.y, P2.y));
 	}
 
 	static inline Point2 max(const Point2& P1, const Point2& P2)
 	{
-		return Point2(std::max(P1.x, P2.x), std::max(P1.y, P2.y));
+		return Point2(max(P1.x, P2.x), max(P1.y, P2.y));
 	}
 
 	static inline Point2 clamp(const Point2& P, const Point2& lower, const Point2& upper)
