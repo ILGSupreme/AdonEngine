@@ -9,6 +9,7 @@
 #include "Ray2.h"
 #include "Rectangle.h"
 #include "Segment2.h"
+#include "Triangle2.h"
 #include "Utilities.h"
 #include "Vector2.h"
 
