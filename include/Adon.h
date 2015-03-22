@@ -8,6 +8,6 @@
 #include "Messaging/Message.h"
 #include "Messaging/MessageDispatcher.h"
 #include "Application/Application.h"
-#include "GUI/Window.h"
+#include "Window/Window.h"
 
 #endif

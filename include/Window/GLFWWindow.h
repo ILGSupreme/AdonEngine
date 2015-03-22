@@ -1,10 +1,10 @@
-#ifndef GLFW_GUI_H_
-#define GLFW_GUI_H_
+#ifndef GLFW_WINDOW_H_
+#define GLFW_WINDOW_H_
 
 #include "Window.h"
 #include "glfw3.h"
 
-class GLFW : public Adon::Window
+class GLFWWindow : public Adon::Window
 {
 public:
 	virtual void update() override;
@@ -17,4 +17,4 @@ private:
 };
 
 
-#endif // !GLFW_GUI_H_
+#endif // !GLFW_WINDOW_H_

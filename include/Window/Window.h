@@ -4,7 +4,7 @@
 namespace Adon
 {
 	// Abstract Class
-	// This is the GUI abstract class , inherit this to implement your own GUI class.
+	// This is the Window abstract class , inherit this to implement your own Window class.
 	class Window
 	{
 	public:

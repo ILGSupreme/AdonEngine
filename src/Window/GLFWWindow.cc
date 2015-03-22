@@ -1,8 +1,8 @@
-#include "glfwGUI.h"
+#include "GLFWWindow.h"
 #include <stdlib.h>
 #include <stdio.h>
 
-void GLFW::update()
+void GLFWWindow::update()
 {
 	while (!glfwWindowShouldClose(window))
 	{
@@ -31,18 +31,18 @@ void GLFW::update()
 	}
 }
 
-void GLFW::error_callback(int error, const char* description)
+void GLFWWindow::error_callback(int error, const char* description)
 {
 	fputs(description, stderr);
 }
 
-void GLFW::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+void GLFWWindow::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 }
 
-void GLFW::setup()
+void GLFWWindow::setup()
 {
 	glfwSetErrorCallback(error_callback);
 	if (!glfwInit())
@@ -58,10 +58,9 @@ void GLFW::setup()
 	glfwSetKeyCallback(window, key_callback);
 }
 
-void GLFW::close()
+void GLFWWindow::close()
 {
 	glfwDestroyWindow(window);
 	glfwTerminate();
 	exit(EXIT_SUCCESS);
 }
-
