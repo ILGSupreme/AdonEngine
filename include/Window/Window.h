@@ -1,16 +1,27 @@
 #ifndef WINDOW_H_
 #define WINDOW_H_
 
+#include "WindowDriver.h"
+
 namespace Adon
 {
-	// Abstract Class
-	// This is the Window abstract class , inherit this to implement your own Window class.
 	class Window
 	{
 	public:
-		virtual void update() = 0;
-	};
+		void SetDriver(WindowDriver& d);
+		void Open();
+		void Update();
+		bool IsRunning();
 
+		static Window& GetInstance();
+	private:
+		WindowDriver* driver;
+
+		// To avoid accidental instantiation of singleton
+		Window() {};
+		Window(Window const&) = delete;
+		void operator=(Window const&) = delete;
+	};
 }
 
 #endif // !WINDOW_H_
