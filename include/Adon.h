@@ -9,5 +9,6 @@
 #include "Messaging/MessageDispatcher.h"
 #include "Application/Application.h"
 #include "Window/Window.h"
+#include "Graphics/Graphics.h"
 
 #endif

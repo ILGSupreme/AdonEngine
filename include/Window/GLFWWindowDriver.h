@@ -1,7 +1,10 @@
 #ifndef GLFW_WINDOW_DRIVER_H
 #define GLFW_WINDOW_DRIVER_H
 
+
 #include "WindowDriver.h"
+
+class OpenGL43Driver;
 
 namespace Adon
 {
@@ -15,7 +18,6 @@ namespace Adon
 		static GLFWWindowDriver& GetInstance();
 	private:
 		bool isRunning;
-
 		// To avoid accidental instantiation of singleton
 		GLFWWindowDriver() {};
 		GLFWWindowDriver(GLFWWindowDriver const&) = delete;
