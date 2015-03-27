@@ -130,12 +130,12 @@ Adon::OpenGL43Driver& Adon::OpenGL43Driver::GetInstance()
 	return instance;
 }
 
-void Adon::OpenGL43Driver::Activate()
+void Adon::OpenGL43Driver::AddSprites()
 {
-	std::cout << "HEJ";
+
 }
 
-void Adon::OpenGL43Driver::Deactivate()
+void Adon::OpenGL43Driver::Draw()
 {
 
 }

@@ -7,22 +7,9 @@ namespace Adon
 	class GraphicsDriver
 	{
 	public:
-		template<typename GDRIVER>
-		GDRIVER& GetDriver()
-		{
-			return GDRIVER::GetInstance();
-		}
-
-		static GraphicsDriver& GetInstance()
-		{
-			static GraphicsDriver instance;
-			return instance;
-		}
-	private:
-		GraphicsDriver() {};
-		GraphicsDriver(GraphicsDriver const&) = delete;
-		void operator=(GraphicsDriver const&) = delete;
+		virtual void AddSprites() = 0;
+		virtual void Draw() = 0;
 	};
 }
 
-#endif // !GRAPHICS_DRIVER_H_
+#endif // !GRAPHICS_DRIVER_H_-

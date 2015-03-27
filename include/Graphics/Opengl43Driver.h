@@ -6,18 +6,18 @@
 
 namespace Adon
 {
-	class OpenGL43Driver
+	class OpenGL43Driver : GraphicsDriver
 	{
 	public:
 		//this is only for show and will be changed
 		void InitShaders();
 		void Startup();
 		void Render();
+		// Virtual Overridden Functions
+		virtual void AddSprites() override;
+		virtual void Draw() override;
 		static OpenGL43Driver& GetInstance();
-		void Activate();
-		void Deactivate();
 	private:
-		bool active;
 		OpenGL43Driver() {};
 		OpenGL43Driver(OpenGL43Driver const&) = delete;
 		void operator=(OpenGL43Driver const&) = delete;
