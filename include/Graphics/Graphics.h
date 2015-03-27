@@ -9,7 +9,8 @@ namespace Adon
 	{
 	public:
 		void SetDriver(GraphicsDriver& gfxdriver);
-		void AddSprites();
+		void AddSprites(Sprite sprites[],unsigned int size);
+		void AddSprites(std::vector<Sprite>& sprites);
 		void Draw();
 		static Graphics& GetInstance();
 	private:

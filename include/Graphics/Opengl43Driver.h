@@ -3,6 +3,7 @@
 #pragma once
 
 #include "../deps/GLEW/glew.h"
+#include "Graphics/GraphicsDriver.h"
 
 namespace Adon
 {
@@ -14,7 +15,8 @@ namespace Adon
 		void Startup();
 		void Render();
 		// Virtual Overridden Functions
-		virtual void AddSprites() override;
+		virtual void AddSprites(Sprite sprites[],unsigned int size) override;
+		virtual void AddSprites(std::vector<Sprite>& sprites);
 		virtual void Draw() override;
 		static OpenGL43Driver& GetInstance();
 	private:

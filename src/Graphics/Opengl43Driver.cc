@@ -130,7 +130,12 @@ Adon::OpenGL43Driver& Adon::OpenGL43Driver::GetInstance()
 	return instance;
 }
 
-void Adon::OpenGL43Driver::AddSprites()
+void Adon::OpenGL43Driver::AddSprites(Sprite sprites[],unsigned int size)
+{
+
+}
+
+void Adon::OpenGL43Driver::AddSprites(std::vector<Sprite>& sprites)
 {
 
 }

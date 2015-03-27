@@ -6,9 +6,14 @@ void Adon::Graphics::SetDriver(Adon::GraphicsDriver& gfxdriver)
 	this->gfxdriver = &gfxdriver;
 }
 
-void Adon::Graphics::AddSprites()
+void Adon::Graphics::AddSprites(Sprite sprites[],unsigned int size)
 {
-	gfxdriver->AddSprites();
+	gfxdriver->AddSprites(sprites,size);
+}
+
+void Adon::Graphics::AddSprites(std::vector<Sprite>& sprites)
+{
+	gfxdriver->AddSprites(sprites);
 }
 
 void Adon::Graphics::Draw()
